@@ -358,7 +358,7 @@ const DESTINOS = [
           contenido: [
             { h: "Si cancelas tú" },
             { p: "La cancelación debe solicitarse por correo a voia.viajar@gmail.com. La fecha en que recibimos tu correo determina la penalidad." },
-            { p: "**Servicios VOIA** (tours, trip leaders y organización: pagos 1 a 4 en Early Bird; pagos 1 y 2 en precio regular). La penalidad es un porcentaje del precio total de estos servicios." },
+            { p: "**Servicios VOIA**. La penalidad es un porcentaje del precio total de estos servicios." },
             { tabla: {
                 etiqueta: "Penalidades de cancelación de los servicios VOIA",
                 cab: ["Fecha de cancelación", "Penalidad"],

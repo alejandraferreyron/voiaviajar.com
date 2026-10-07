@@ -348,7 +348,7 @@ const DESTINOS = [
             { ul: [
               "Para reservar es necesario aprobar el test de afinidad VOIA y pagar el anticipo o el primer pago.",
               "Si reservas después de alguna fecha de pago, pagas en ese momento el monto acumulado hasta esa fecha. Por ejemplo, un Early Bird que reserva en diciembre paga $8,500 MXN al reservar.",
-              "Viajeros en México pagan en pesos (MXN); viajeros fuera de México pagan en euros (EUR). Los montos se fijan al reservar y no cambian por el tipo de cambio.",
+              "Viajeros en México pagan en pesos (MXN); viajeros fuera de México pueden pagar por transferencia internacional o mediante Stripe, si se elige esta opción se sumará el total de la comisión correspondiente.",
               "Si un pago no se realiza a tiempo, VOIA puede liberar tu lugar después de avisarte por escrito con 7 días naturales para ponerte al corriente. En ese caso se aplican las penalidades de cancelación vigentes.",
             ] },
           ],
@@ -369,12 +369,6 @@ const DESTINOS = [
                   ["Desde el 23 mar 2027", "100% del precio total de los servicios VOIA"],
                 ],
             } },
-            { p: "**Pagos de abril y mayo** (pagos 5 y 6 en Early Bird; pagos 3 y 4 en precio regular)" },
-            { ul: [
-              "Si cancelas antes de esas fechas de pago, no se cobran.",
-              "Si ya los pagaste pero VOIA todavía no los ha pagado al proveedor, se te devuelven completos.",
-              "Si VOIA ya los pagó al proveedor, solo se devuelve lo que el proveedor reembolse.",
-            ] },
             { h: "Crédito VOIA" },
             { p: "Si cancelas hasta el 30 de noviembre de 2026, en lugar de perder el anticipo puedes convertir el 100% de lo que hayas pagado en Crédito VOIA. El crédito es válido durante 18 meses para cualquier viaje VOIA. Es personal y no se reembolsa en efectivo." },
             { h: "Ceder tu lugar" },
@@ -384,8 +378,6 @@ const DESTINOS = [
               "los proveedores permitan el cambio de nombre;",
               "se cubran los cargos que los proveedores cobren por el cambio.",
             ] },
-            { h: "Mínimo de viajeros" },
-            { p: "El viaje sale con un mínimo de 4 viajeros. Si no se alcanza el mínimo, VOIA puede cancelar el viaje y te devolverá el 100% de lo pagado, o lo convertirá en Crédito VOIA si así lo prefieres." },
             { h: "Si cancela VOIA" },
             { ul: [
               "**Por decisión de VOIA:** se devuelve el 100% de lo pagado.",

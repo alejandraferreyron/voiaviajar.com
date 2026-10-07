@@ -1,0 +1,31 @@
+# macOS clutter
+.DS_Store
+**/.DS_Store
+
+# local dev tools (not part of the website)
+.claude/
+
+# full-size gallery originals (web-sized copies live in each gallery's web/ folder)
+media/*/*
+!media/*/web/
+!media/*/web/**
+!media/logo/
+!media/logo/**
+
+# gallery originals the site loads directly (small files)
+!media/bajamedia/mobula1.jpg
+!media/bajamedia/mobula1-tile.jpg
+!media/balimedia/bali1-web.jpg
+!media/filipinasmedia/coron1-tile.jpg
+!media/rivieramedia/cenotes1-tile.jpg
+!media/rivieramedia/tiburontoro1.jpg
+!media/sumatramedia/orangutan1-hero.jpg
+!media/sumatramedia/orangutan1-tile.jpg
+!media/veracruzmedia/jalco1-3-tile.jpg
+!media/veracruzmedia/sotano1.jpg
+!media/veracruzmedia/sotano10.jpg
+!media/veracruzmedia/sotano3.jpg
+!media/veracruzmedia/sotano4.jpg
+!media/veracruzmedia/sotano6.jpg
+!media/veracruzmedia/sotano7.jpg
+!media/veracruzmedia/sotano9.jpg

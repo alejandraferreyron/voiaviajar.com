@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VOIA | Viajes de naturaleza y turismo sostenible</title>
+  <meta name="description" content="VOIA organiza viajes en grupos pequeños para reconectar con la naturaleza: Baja California Sur, Riviera Maya, Veracruz, Bali, Filipinas, Raja Ampat, Sumatra y Komodo.">
+  <meta name="theme-color" content="#0a2f4f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="media/balimedia/web/herovoia-poster.jpg?v=3">
+  <link rel="preload" as="image" href="media/logo/voia-blanco.png?v=2">
+  <link rel="preload" as="image" href="media/logo/voia-azul.png?v=2">
+  <link rel="icon" href="favicon.ico?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="48x48" href="media/logo/favicon-48.png?v=2">
+  <link rel="icon" type="image/png" sizes="192x192" href="media/logo/favicon-192.png?v=2">
+  <link rel="apple-touch-icon" href="media/logo/apple-touch-icon.png?v=2">
+  <link rel="stylesheet" href="styles.css?v=20261007b">
+  <noscript><style>.hero__video { opacity: 1 !important; }</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#destinos">Saltar al contenido</a>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- ============ INICIO (video) ============ -->
+    <section class="hero" id="inicio" aria-label="Inicio">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto">
+        <source src="media/balimedia/web/herovoia.mp4?v=3" type="video/mp4">
+      </video>
+      <div class="hero__shade"></div>
+      <div class="hero__content">
+        <p class="eyebrow">Naturaleza · Bienestar · Aventura</p>
+        <h1>Viajar<br><em>para reconectar</em></h1>
+        <p class="hero__lead">Una forma diferente de viajar: descubrir, conectar y vivir cada destino de forma consciente</p>
+        <a class="btn btn--light" href="#destinos">Ver destinos</a>
+      </div>
+      <a class="hero__scroll" href="#quienes-somos" aria-label="Bajar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="about" id="quienes-somos">
+      <div class="about__text">
+        <p class="eyebrow eyebrow--dark">Quiénes somos</p>
+        <h2>Cuidamos lo que conocemos y amamos</h2>
+        <p>VOIA nace de las ganas de descubrir el mundo de una forma diferente: más cercana, más auténtica y más consciente. Creamos viajes en grupos pequeños que combinan aventura, naturaleza, cultura y bienestar, buscando experiencias que nos saquen de lo cotidiano y nos permitan conectar de verdad con cada lugar, con las personas que conocemos en el camino y también con nosotros mismos.</p>
+        <p>Creemos que viajar debe dejar huellas positivas. Por eso trabajamos con guías locales, comunidades y operadores que comparten nuestra forma de entender el turismo: respetando los ecosistemas, cuidando la vida silvestre y procurando que parte del valor generado permanezca en cada destino. No viajamos solo para conocer lugares nuevos, sino para aprender de ellos y volver a casa con una mirada diferente del mundo.</p>
+      </div>
+      <div class="about__img">
+        <img src="media/balimedia/bali1-web.jpg" alt="Una mujer con sombrero cónico y vestido rojo, de pie frente a los arrozales en terrazas de Bali" loading="lazy">
+      </div>
+    </section>
+
+    <!-- ============ DESTINOS ============ -->
+    <section class="destinations section" id="destinos">
+      <div class="container destinations__head">
+        <p class="eyebrow eyebrow--dark">Destinos</p>
+        <h2>Elige tu próximo viaje</h2>
+        <p>Cada destino tiene su propia página con la descripción, el itinerario y la galería.</p>
+      </div>
+
+      <h3 class="group-title container">Nacionales</h3>
+      <div class="grid" id="gridNacionales"></div>
+
+      <h3 class="group-title container">Internacionales</h3>
+      <div class="grid" id="gridInternacionales"></div>
+    </section>
+
+    <!-- ============ VALOR DIFERENCIAL ============ -->
+    <section class="values" id="diferencial" aria-labelledby="valuesTitle">
+      <div class="values__sticky">
+        <div class="values__stage">
+          <!-- Trayectoria: se dibuja en sentido horario con el scroll (solo en pantallas anchas) -->
+          <svg class="values__ring" aria-hidden="true" focusable="false"><path class="ring__track"/><path class="ring__draw" pathLength="1"/></svg>
+
+          <div class="values__center">
+            <div class="values__markwrap">
+              <svg class="values__markring" viewBox="0 0 80 80" aria-hidden="true" focusable="false"><circle class="ring__track" cx="40" cy="40" r="37"/><circle class="ring__draw" cx="40" cy="40" r="37" pathLength="1" transform="rotate(-90 40 40)"/></svg>
+              <svg class="values__mark" width="56" height="56" viewBox="0 0 64 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="a" d="M32 54V30"/><path class="a" d="M32 34c0-9 6-14 16-14 0 9-6 14-16 14z"/><path d="M32 42c0-7-5-11-14-11 0 7 5 11 14 11z"/></svg>
+            </div>
+            <h2 id="valuesTitle"><span class="brand-inline">VOIA</span> Viajar <br>para <span class="brand-inline">aprender</span> <br><span class="brand-inline">VOIA</span> Aprender <br>para <span class="brand-inline">cuidar</span></h2>
+            <p class="values__intro">En VOIA un viaje no termina cuando vuelves a casa. Diseñamos cada ruta para acercarte a su cultura y naturaleza. Buscamos aprender de las personas que nos reciben e impactar de forma positiva cada lugar. Estos son nuestros principios.</p>
+          </div>
+
+          <ul class="values__wheel">
+          <li class="goal goal--top" style="--gx:0; --gy:-1">
+            <div class="goal__face">
+              <svg class="goal__icon" viewBox="0 0 64 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle class="a" cx="32" cy="20" r="8"/><path d="M18 52c0-8 6-14 14-14s14 6 14 14"/><circle cx="12" cy="28" r="5"/><path d="M4 48c0-6 3-10 8-10"/><circle cx="52" cy="28" r="5"/><path d="M60 48c0-6-3-10-8-10"/></svg>
+              <h3 class="goal__title"><button type="button" class="goal__toggle" aria-expanded="false" aria-controls="goal-desc-1">Grupos pequeños, huellas positivas</button></h3>
+            </div>
+            <div class="goal__panel" id="goal-desc-1">
+              <strong class="goal__panel-title" aria-hidden="true">Grupos pequeños, huellas positivas</strong>
+              <p>Viajamos en grupos pequeños para conocernos, compartir la aventura y llegar a lugares donde un grupo grande tendría más dificultades. En cada destino buscamos aportar algo positivo y dejar los lugares mejor de como los encontramos.</p>
+            </div>
+          </li>
+          <li class="goal" style="--gx:0.951; --gy:-0.309">
+            <div class="goal__face">
+              <svg class="goal__icon" viewBox="0 0 64 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="22"/><path class="a" d="M42 22l-6 14-14 6 6-14z"/><path d="M32 6v4M32 54v4M6 32h4M54 32h4"/></svg>
+              <h3 class="goal__title"><button type="button" class="goal__toggle" aria-expanded="false" aria-controls="goal-desc-2">Historias contadas por su propia gente</button></h3>
+            </div>
+            <div class="goal__panel" id="goal-desc-2">
+              <strong class="goal__panel-title" aria-hidden="true">Historias contadas por su propia gente</strong>
+              <p>Recorremos cada destino con guías locales que conocen sus caminos, su historia y su vida cotidiana. Nos ayudan a reconocer lo que vemos y comparten su manera de vivir y entender el lugar que visitamos.</p>
+            </div>
+          </li>
+          <li class="goal" style="--gx:0.588; --gy:0.809">
+            <div class="goal__face">
+              <svg class="goal__icon" viewBox="0 0 64 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 42C5 33 13 28 23 28c9 0 16 4 20 10 2 3 5 4 8 2 3-2 4-6 2-10"/><path d="M53 30c-3 0-6-2-8-6M53 30c3 0 6-2 7-6"/><path d="M5 42c0 6 8 10 18 10 9 0 16-3 21-9"/><path d="M17 46c2 2 5 3 8 3"/><path class="a" d="M15 24v-6M15 18c-1-3-4-4-6-3M15 18c1-3 4-4 6-3"/><circle class="a" cx="12" cy="41" r="1.4"/></svg>
+              <h3 class="goal__title"><button type="button" class="goal__toggle" aria-expanded="false" aria-controls="goal-desc-3">Encuentros éticos con la vida silvestre</button></h3>
+            </div>
+            <div class="goal__panel" id="goal-desc-3">
+              <strong class="goal__panel-title" aria-hidden="true">Encuentros éticos con la vida silvestre</strong>
+              <p>Ver animales en libertad es una de las grandes joyas del viaje. Mantenemos la distancia, evitamos alimentarlos o perseguirlos y seguimos las indicaciones de los guías. Cada encuentro depende de los animales y de las condiciones.</p>
+            </div>
+          </li>
+          <li class="goal" style="--gx:-0.588; --gy:0.809">
+            <div class="goal__face">
+              <svg class="goal__icon" viewBox="0 0 64 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 54C12 40 8 30 8 22c0-7 5-12 12-12 5 0 9 3 12 7 3-4 7-7 12-7 7 0 12 5 12 12 0 8-4 18-24 32z"/><path class="a" d="M32 44V30m0 0c0-5 4-8 8-8 0 5-3 8-8 8zm0 4c0-4-3-6-7-6 0 4 3 6 7 6z"/></svg>
+              <h3 class="goal__title"><button type="button" class="goal__toggle" aria-expanded="false" aria-controls="goal-desc-4">Comunidades que se benefician</button></h3>
+            </div>
+            <div class="goal__panel" id="goal-desc-4">
+              <strong class="goal__panel-title" aria-hidden="true">Comunidades que se benefician</strong>
+              <p>Elegimos alojamientos, restaurantes, guías y otros servicios locales para que parte del dinero del viaje llegue a quienes viven en el destino. Sus negocios y su trabajo son parte de lo que hace posible nuestra experiencia.</p>
+            </div>
+          </li>
+          <li class="goal" style="--gx:-0.951; --gy:-0.309">
+            <div class="goal__face">
+              <svg class="goal__icon" viewBox="0 0 64 64" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 8C22.5 8 15 15.2 15 24.2c0 5.8 2.8 9.6 6.5 13 2.1 2 3 3.8 3 6.8V46h15v-2c0-3 .9-4.8 3-6.8 3.7-3.4 6.5-7.2 6.5-13C49 15.2 41.5 8 32 8z"/><path d="M25 52h14M28 58h8"/><path class="a" d="M27 29l5 6 5-6M32 35v10"/></svg>
+              <h3 class="goal__title"><button type="button" class="goal__toggle" aria-expanded="false" aria-controls="goal-desc-5">Viajes que dejan aprendizaje</button></h3>
+            </div>
+            <div class="goal__panel" id="goal-desc-5">
+              <strong class="goal__panel-title" aria-hidden="true">Viajes que dejan aprendizaje</strong>
+              <p>Queremos que te lleves algo más que buenas fotos. Por eso, en cada viaje buscamos conocer la cultura y tradiciones de cada lugar, así como los retos que enfrentan. Que vuelvas con historias, conocimientos y una mirada más consciente sobre los lugares que visitas.</p>
+            </div>
+          </li>
+          </ul>
+
+          <svg class="values__head" aria-hidden="true" focusable="false"><circle r="6"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="contact section" id="contacto">
+      <div class="container contact__inner">
+        <p class="eyebrow">Contacto</p>
+        <h2>¿Listo para tu próxima aventura?</h2>
+        <p>Escríbenos por WhatsApp y te ayudamos a elegir el viaje y las fechas que mejor te acomoden.</p>
+        <a class="btn btn--light" href="#" data-wa>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.1L2 22l5-1.3A11 11 0 0 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-2.9-.2-.3A9 9 0 1 1 12 20z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js?v=20261007b"></script>
+  <script src="site.js?v=20261007b"></script>
+  <script src="home.js?v=20261007b"></script>
+  <script src="values.js?v=20261007b"></script>
+</body>
+</html>

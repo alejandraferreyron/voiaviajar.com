@@ -53,7 +53,7 @@ const DESTINOS = [
       { dia: 5, titulo: "Tercer safari", lugar: "La Ventana", plan: ["Tercer día de safari en busca de móbulas y otros grandes animales del mar abierto.", "Abril es conocido en esta costa por las congregaciones de móbulas y, con suerte, por el paso de la ballena azul."] },
       { dia: 6, titulo: "Rumbo a Cabo Pulmo", lugar: "La Ventana – Cabo Pulmo", plan: ["Traslado de unas dos horas al Parque Nacional Cabo Pulmo y check-in en las cabañas, donde pasamos las dos últimas noches.", "Safari de medio día en el parque, conocido por sus jureles y tiburones toro.", "Comida en un local de tacos del parque."] },
       { dia: 7, titulo: "Día libre en Cabo Pulmo", lugar: "Cabo Pulmo", plan: ["Día libre para descansar, disfrutar la playa y las cabañas o caminar por las montañas del parque.", "Opcional, si hay buena visibilidad: dos inmersiones de buceo con tanque (con costo aparte)."] },
-      { dia: 8, titulo: "Despedida", lugar: "Cabo Pulmo – La Paz", plan: ["Regreso a La Paz en transfer privado.", "Según el horario de los vuelos, paramos en un campo de cactus o damos un último paseo y hacemos compras en el centro.", "Traslado al aeropuerto."] },
+      { dia: 8, titulo: "Despedida", lugar: "Cabo Pulmo – La Paz", plan: ["Regreso a La Paz en transfer privado.", "Según el horario de los vuelos, iremos en un campo de saguaros o daremos un último paseo por el centro.", "Traslado al aeropuerto."] },
     ],
     nota: "Los avistamientos de fauna silvestre no están garantizados. Las salidas pueden cambiar según el clima y las condiciones del mar.",
   },

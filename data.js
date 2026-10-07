@@ -268,7 +268,6 @@ const DESTINOS = [
       bloques: [
         {
           titulo: "Precios",
-          abierto: true,
           contenido: [
             { h: "Precios por persona (IVA incluido)" },
             { tabla: {

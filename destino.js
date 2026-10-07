@@ -244,9 +244,6 @@ function render() {
     });
   }
 
-  /* ---- Pagos y políticas de cancelación (después del itinerario y antes de la galería) ---- */
-  if (d.pagos) sections.push({ id: "pagos", label: "Pagos", html: pagosHTML(d.pagos) });
-
   /* ---- Galería en movimiento ---- */
   // Las fotos propias se muestran completas (sin recortar) con la misma altura; las de Unsplash, en cuadros uniformes.
   // Si la foto trae "credito" (por ejemplo, no es propia), se envuelve para mostrar el texto pequeño en la esquina.
@@ -281,6 +278,9 @@ function render() {
       </div>
     </section>`,
   });
+
+  /* ---- Pagos y políticas de cancelación (después de la galería) ---- */
+  if (d.pagos) sections.push({ id: "pagos", label: "Pagos", html: pagosHTML(d.pagos) });
 
   /* ---- Preguntas (enlaza al pie de página) ---- */
   const pills = [...sections.map((s) => [`#${s.id}`, s.label]), ["#faq", "Preguntas"]];

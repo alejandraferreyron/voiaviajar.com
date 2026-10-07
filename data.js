@@ -681,8 +681,8 @@ const FAQ = [
     a: "¡Haz el test que encontrarás en el menú! Te ayudará a descubrir qué experiencias encajan mejor con tus intereses y tu forma de viajar. Si tienes dudas sobre el nivel de actividad o algún requisito específico, escríbenos y lo revisamos contigo.",
   },
   {
-    q: "¿Me garantizan ver animales?",
-    a: "No, y es mejor así. Son animales libres y sus movimientos dependen de la temporada, el clima y el mar. Elegimos las mejores épocas para cada destino, pero nunca alteramos el comportamiento de los animales para asegurar un avistamiento.",
+    q: "¿Todos los viajes de VOIA son en grupo?",
+    a: "Sí, todos nuestros viajes son en grupo. Queremos conectar a personas que comparten las ganas de explorar, aprender y vivir nuevas experiencias. Compartir una aventura también es conocer otras perspectivas, acompañarse en los retos y crear amistades que pueden continuar mucho después del viaje. Si por otro lado, tienes un grupo de entre 8 y 10 personas, podemos personalizar el viaje.",
   },
   {
     q: "¿Cómo reservo mi lugar?",

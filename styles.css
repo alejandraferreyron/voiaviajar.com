@@ -575,3 +575,6 @@ p { margin: 0 0 1em; }
 .q-stage--result .q-again:hover { color: var(--white); }
 .q-result__sub { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: clamp(1.1rem, 3.4vw, 1.4rem); line-height: 1.4; margin: -.2em auto 1.4em; text-wrap: balance; color: #c9ecf5; } /* sin max-width: en escritorio cabe en una sola línea; en pantallas angostas, balance reparte el salto */
 .q-stage--result .q-result p.q-result__sub { color: #c9ecf5; }
+
+/* Fotos: sin menú "Guardar en Fotos" al mantener presionado (iPhone) ni arrastre */
+img, .phero, .quote, .q-intro { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; }

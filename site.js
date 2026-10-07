@@ -113,3 +113,8 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.12 }
 );
 const observeReveals = () => document.querySelectorAll(".reveal:not(.is-in)").forEach((el) => revealObserver.observe(el));
+
+/* ------------ Protección de fotos ------------ */
+// Evita el menú "Guardar imagen" (clic derecho o mantener presionado) y arrastrar fotos.
+document.addEventListener("contextmenu", (e) => { if (e.target.closest("img, .phero, .quote, .q-intro")) e.preventDefault(); });
+document.addEventListener("dragstart", (e) => { if (e.target.tagName === "IMG") e.preventDefault(); });

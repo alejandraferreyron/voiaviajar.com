@@ -110,8 +110,8 @@ p { margin: 0 0 1em; }
 
 /* ---------- VALOR DIFERENCIAL ---------- */
 /* Rueda interactiva: el mensaje central y las cinco metas aparecen con el scroll.
-   Modos (los pone values.js): is-wheel = rueda en pantallas anchas · is-stack = tarjetas en pantallas angostas
-   is-scrolly = la sección queda fija mientras dura la animación (se desactiva con "reducir movimiento"). */
+   Modos (los pone values.js): is-wheel = rueda en pantallas anchas · is-stack = lista de tarjetas en pantallas angostas (móvil)
+   is-scrolly = la sección queda fija mientras dura la animación de la rueda (solo pantallas anchas; se desactiva con "reducir movimiento"). */
 .values { --stage-top: 0px; --sl: 300; background: var(--sky); text-align: center; position: relative; }
 .values svg { stroke: var(--navy); }
 .values svg .a { stroke: var(--blue-bright); }
@@ -151,19 +151,16 @@ p { margin: 0 0 1em; }
 .values__wheel { list-style: none; margin: 0; padding: 0; }
 .values.is-wheel .values__wheel { position: absolute; inset: 0; pointer-events: none; }
 .values.is-wheel .goal { position: absolute; left: calc(50% + var(--rx, 300px) * var(--gx)); top: calc(50% + var(--ry, 220px) * var(--gy)); width: calc(216px * var(--s, 1)); transform: translate(-50%, -50%); pointer-events: auto; }
-.values.is-stack .values__wheel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: min(100%, 600px); }
-.values.is-stack .goal { align-self: start; }
-.values.is-stack .goal:nth-child(even) { margin-top: 18px; }
-.values.is-stack .goal:last-child { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); }
+.values.is-stack .values__wheel { display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-rows: 1fr; gap: 12px; width: min(100%, 560px); }
 
 .goal.is-active { z-index: 20; }
 .goal.is-pending { pointer-events: none; } /* aún sin aparecer: no reacciona al ratón, pero el teclado sí puede llegar */
 .goal__face { position: relative; display: flex; flex-direction: column; align-items: center; gap: calc(10px * var(--s, 1)); padding: 10px 8px; background: var(--sky); opacity: var(--g, 1); transform: translateY(calc((1 - var(--g, 1)) * 28px)) scale(calc(.92 + .08 * var(--g, 1))); will-change: transform, opacity; }
-.values.is-stack .goal__face { background: rgba(255, 255, 255, .62); border-radius: 14px; padding: 14px 8px 12px; }
+.values.is-stack .goal__face { box-sizing: border-box; justify-content: center; height: 100%; min-height: clamp(172px, 52vw, 212px); gap: 14px; padding: 24px 20px; background: rgba(255, 255, 255, .62); border-radius: 16px; }
 .goal__icon { flex: none; width: calc(64px * var(--s, 1)); height: calc(64px * var(--s, 1)); }
-.values.is-stack .goal__icon { width: 46px; height: 46px; }
+.values.is-stack .goal__icon { width: 60px; height: 60px; }
 .goal__title { font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: .14em; font-size: max(.75rem, calc(.9rem * var(--s, 1))); line-height: 1.45; margin: 0; color: var(--navy); }
-.values.is-stack .goal__title { font-size: .76rem; letter-spacing: .1em; }
+.values.is-stack .goal__title { font-size: 1rem; letter-spacing: .1em; }
 .goal__toggle { background: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; text-align: inherit; cursor: pointer; }
 .goal__toggle::after { content: ""; position: absolute; inset: -6px; }
 .goal__toggle:focus-visible { outline: none; }
@@ -178,20 +175,8 @@ p { margin: 0 0 1em; }
 .values.is-wheel .goal--top.is-active .goal__panel { transform: translate(-50%, 0) scale(1.03); }
 /* Pantallas angostas: la descripción se abre como una hoja arriba (con la sección fija) o abajo (sin animación) */
 .values.is-stack .goal__panel { left: 16px; right: 16px; width: auto; transform: translateY(-10px) scale(.98); }
-.values.is-stack.is-scrolly .goal__panel { top: 8px; }
-.values.is-stack:not(.is-scrolly) .goal__panel { position: fixed; top: auto; bottom: 16px; transform: translateY(12px) scale(.98); }
+.values.is-stack:not(.is-scrolly) .goal__panel { position: fixed; top: auto; bottom: 96px; transform: translateY(12px) scale(.98); } /* queda por encima del botón de WhatsApp para no taparse con él */
 .values.is-stack .goal.is-active .goal__panel { transform: translateY(0) scale(1); }
-
-/* Pantallas angostas y bajas: versión compacta para que todo quepa mientras la sección está fija */
-.values.is-compact .values__markwrap { width: 48px; height: 48px; }
-.values.is-compact .values__mark { width: 30px; height: 30px; }
-.values.is-compact h2 { font-size: clamp(.95rem, 4vw, 1.3rem); }
-.values.is-compact .values__intro { font-size: .8rem; line-height: 1.45; }
-.values.is-compact .values__wheel { gap: 8px; }
-.values.is-compact .goal:nth-child(even) { margin-top: 12px; }
-.values.is-compact .goal__face { padding: 8px 6px; gap: 6px; }
-.values.is-compact .goal__icon { width: 34px; height: 34px; }
-.values.is-compact .goal__title { font-size: .68rem; letter-spacing: .08em; }
 
 /* ---------- DESTINOS (inicio) ---------- */
 .destinations { padding-bottom: 0; }

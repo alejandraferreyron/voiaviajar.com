@@ -4,7 +4,11 @@
    Línea de tiempo (p = avance del scroll dentro de la sección, de 0 a 1):
      0.00 – 0.12  aparece el mensaje central
      0.12 – 0.86  se dibuja la trayectoria en sentido horario desde las 12; cada meta aparece al llegar a su posición
-     0.86 – 1.00  la composición completa se queda quieta y después la sección se suelta */
+     0.86 – 1.00  la composición completa se queda quieta y después la sección se suelta
+
+   Esa animación es solo de pantallas anchas (rueda). En móvil NO hay animación fija ni scroll controlado: el título, el
+   párrafo y los cinco valores van en el flujo normal de la página, uno debajo de otro, y cada tarjeta entra con un
+   fade-in suave la primera vez que aparece (la misma clase .reveal de "Nuestros destinos"). */
 (() => {
   const section = document.getElementById("diferencial");
   if (!section) return;
@@ -120,12 +124,6 @@
     section.classList.add("is-tighter");
   }
 
-  /* ---------- ¿Caben mensaje y tarjetas en una pantalla angosta con la sección fija? ---------- */
-  function stackFits() {
-    const gap = parseFloat(getComputedStyle(stage).rowGap) || 0;
-    return center.offsetHeight + wheel.offsetHeight + gap + 20 <= stage.clientHeight;
-  }
-
   /* ---------- Elige el modo según el tamaño de pantalla y "reducir movimiento" ---------- */
   function setup() {
     wide = window.matchMedia(WIDE).matches;
@@ -135,19 +133,16 @@
     section.classList.remove("is-compact", "is-tight", "is-tighter");
     setVar(section, "--sl", wide ? 320 : 260);
 
-    scrolly = !reduced;
+    // La sección solo se fija y se anima con el scroll en pantallas anchas. En móvil todo va en el flujo normal de la página.
+    scrolly = wide && !reduced;
     section.classList.toggle("is-scrolly", scrolly);
 
-    if (wide) {
-      layoutWheel();
-    } else if (scrolly && !stackFits()) {
-      section.classList.add("is-compact");
-      if (!stackFits()) {
-        // Pantalla demasiado baja: se muestra la composición completa sin fijar la sección.
-        section.classList.remove("is-compact", "is-scrolly");
-        scrolly = false;
-      }
-    }
+    if (wide) layoutWheel();
+
+    // Móvil: cada tarjeta entra una sola vez con un fade-in suave y después se queda donde está (igual que "Nuestros destinos").
+    goals.forEach((g) => g.querySelector(".goal__face").classList.toggle("reveal", !wide));
+    if (!wide && typeof observeReveals === "function") observeReveals();
+
     apply(scrolly ? progress() : 1);
   }
 

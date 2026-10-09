@@ -248,8 +248,8 @@
                   <a class="btn btn--ghost-light" href="${reserve}" target="_blank" rel="noopener">Reservar de todos modos</a>`,
       },
       no: {
-        title: "Este viaje no es para ti (por ahora)",
-        body: `<p>Te lo decimos con cariño:</p>${list}<p>Preferimos ser honestos a que vivas una experiencia que no disfrutes.</p>`,
+        title: "Creemos que tal vez este viaje no sea para ti, aquí te va el porque:",
+        body: `<p>¡Todos los viajeros somos diferentes y está bien! Pero:</p>${list}<p>A pesar de esto, creemos que salir de tu zona de confort puede llevarte a grandes experiencias. Habla con una de nuestras representantes para terminar de definir si este viaje es para ti.</p>`,
         actions: `<a class="btn btn--light" href="${wa(quiz.mensajeNo)}" target="_blank" rel="noopener">Escríbenos</a>
                   <a class="btn btn--ghost-light" href="index.html#destinos">Ver otros viajes</a>`,
       },

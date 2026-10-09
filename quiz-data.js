@@ -59,7 +59,7 @@ const QUIZZES = {
         o: [["Es parte de estar en la naturaleza.", "green"],
             ["No me encantan, pero puedo con ello.", "yellow"],
             ["Me dan mucho asco o pánico y me arruinarían el viaje.", "red"]],
-        reason: "En Bali los insectos y los animales son parte del día a día, también en el alojamiento." },
+        reason: "En Bali los insectos y los animales son parte del día a día, podemos llegar a encontrarlos incluso en el alojamiento." },
       { id: 4, tag: "Actitud", critical: false,
         q: "Llueve, hace mucho calor, un traslado se alarga o algo no es tan cómodo como en casa. Normalmente tú:",
         o: [["Lo tomo con humor. Es parte de la aventura.", "green"],
@@ -101,7 +101,7 @@ const QUIZZES = {
         o: [["Quiero volver distinto: crecer, conocer una cultura nueva y conectar con la naturaleza.", "green"],
             ["Quiero vivir algo increíble, y si algo cambia en mí, bienvenido.", "green"],
             ["Solo quiero descansar y desconectar.", "red"]],
-        reason: "VOIA busca que el viaje te mueva algo por dentro; no es un viaje solo para descansar." },
+        reason: "Este viaje está hecho para aprovechar al máximo la isla, no es un viaje solo para descansar." },
     ],
   },
 };

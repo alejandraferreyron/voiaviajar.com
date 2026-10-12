@@ -285,6 +285,17 @@ function render() {
   /* ---- Preguntas (enlaza al pie de página) ---- */
   const pills = [...sections.map((s) => [`#${s.id}`, s.label]), ["#faq", "Preguntas"]];
 
+  /* ---- Más información (solo viajes con "masInfo: true" en data.js; va al final de la información) ---- */
+  const masInfoHTML = d.masInfo
+    ? `
+    <section class="contact section" id="mas-info" aria-labelledby="masInfoTitle">
+      <div class="container contact__inner">
+        <h2 id="masInfoTitle">¿Quieres más información sobre ${esc(d.nombre)}?</h2>
+        ${waBtn("Escríbenos", msg, "btn--light")}
+      </div>
+    </section>`
+    : "";
+
   /* ---- Otros destinos ---- */
   const pool = DESTINOS.filter((o) => !o.proximamente);
   const idx = pool.indexOf(d);
@@ -332,6 +343,7 @@ function render() {
     ${first.html}
     ${quoteHTML}
     ${rest.map((s) => s.html).join("")}
+    ${masInfoHTML}
     ${othersHTML}
     ${ctaHTML}`;
 
